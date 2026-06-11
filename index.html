@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nosso Amor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="page bg" style="background-image:url('assets/images/tela1.jpg')">
+<div class="overlay"></div>
+<div class="content">
+<h1>Mais um dia dos namorados ao seu lado...</h1>
+<p>Que sorte a minha!</p>
+<button onclick="nextPage()">Abrir</button>
+</div>
+</section>
+
+<section class="page bg" style="background-image:url('assets/images/tela2.jpg')">
+<div class="overlay"></div>
+<div class="content">
+<h2>Estamos juntos há</h2>
+<div id="counter">0</div>
+<p>dias ❤️</p>
+<button onclick="nextPage()">Continuar</button>
+</div>
+</section>
+
+<section class="page">
+<div class="content">
+<img class="cover" src="assets/images/capa-musica.jpg">
+<h2>Nobody New</h2>
+<p>The Marías</p>
+<audio controls>
+<source src="assets/audio/nobody-new.mp3">
+</audio>
+<button onclick="nextPage()">Próximo</button>
+</div>
+</section>
+
+<section class="page bg" style="background-image:url('assets/images/tela4.jpg')">
+<div class="overlay"></div>
+<div class="content">
+<h2>Para você ❤️</h2>
+<p>Nicolas, você me mostrou da forma mais linda e transparente o que é o amor...</p>
+<button onclick="nextPage()">Momentos</button>
+</div>
+</section>
+
+<section class="page">
+<div class="content">
+<h2>Nos conhecemos aqui</h2>
+<iframe src="https://maps.google.com/maps?q=R.%20Eziquiel%20Corr%C3%AAa%20Machado%20347%20Suzano&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+<button onclick="nextPage()">Ver Fotos</button>
+</div>
+</section>
+
+<section class="page">
+<div class="content">
+<h2>Nossos Momentos</h2>
+<div class="gallery">
+<img src="assets/images/foto1.jpg">
+<img src="assets/images/foto2.jpg">
+<img src="assets/images/foto3.jpg">
+</div>
+<button onclick="document.getElementById('spoiler').style.display='block'">Spoiler Aqui</button>
+<div id="spoiler" style="display:none">
+<img src="assets/images/pedido.jpg">
+</div>
+<button onclick="nextPage()">Final</button>
+</div>
+</section>
+
+<section class="page bg" style="background-image:url('assets/images/final.jpg')">
+<div class="overlay"></div>
+<div class="content">
+<h1>Eu te amo ❤️</h1>
+<p>Obrigado por chegar até aqui.</p>
+</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body{margin:0;background:#121212;color:white;font-family:Arial,sans-serif;overflow:hidden}
+.page{height:100vh;display:none;align-items:center;justify-content:center;text-align:center;padding:20px;position:relative}
+.page:first-child{display:flex}
+.bg{background-size:cover;background-position:center}
+.overlay{position:absolute;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(8px)}
+.content{position:relative;z-index:2;max-width:700px}
+h1,h2{background:linear-gradient(90deg,#1DB954,#a855f7);-webkit-background-clip:text;color:transparent}
+button{background:#1DB954;color:white;border:none;padding:14px 24px;border-radius:999px;margin-top:20px}
+#counter{font-size:64px;font-weight:bold}
+.cover{width:260px;border-radius:16px}
+.gallery{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.gallery img,.content img{max-width:250px;border-radius:12px}
+iframe{width:100%;height:300px;border:0;border-radius:12px}
