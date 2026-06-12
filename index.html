@@ -5,10 +5,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nosso Amor</title>
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="progress-row">
+  <button class="progress-step current" data-page="0" aria-label="Tela 1"><span class="progress-fill"></span></button>
+  <button class="progress-step" data-page="1" aria-label="Tela 2"><span class="progress-fill"></span></button>
+  <button class="progress-step" data-page="2" aria-label="Tela 3"><span class="progress-fill"></span></button>
+  <button class="progress-step" data-page="3" aria-label="Tela 4"><span class="progress-fill"></span></button>
+  <button class="progress-step" data-page="4" aria-label="Tela 5"><span class="progress-fill"></span></button>
+  <button class="progress-step" data-page="5" aria-label="Tela 6"><span class="progress-fill"></span></button>
+</div>
 
-<section class="page bg" style="background-image:url('assets/images/tela1.jpg')">
+<section class="page bg">
+<div class="background" style="background-image:url('assets/images/tela inicial.jpg')"></div>
 <div class="overlay"></div>
 <div class="content">
 <h1>Mais um dia dos namorados ao seu lado...</h1>
@@ -17,7 +27,8 @@
 </div>
 </section>
 
-<section class="page bg" style="background-image:url('assets/images/tela2.jpg')">
+<section class="page bg">
+<div class="background" style="background-image:url('assets/images/contador.jpg')"></div>
 <div class="overlay"></div>
 <div class="content">
 <h2>Estamos juntos há</h2>
@@ -27,58 +38,221 @@
 </div>
 </section>
 
-<section class="page">
+<section class="page music-page">
+<video class="video-background" autoplay muted loop playsinline>
+  <!-- Substitua o src abaixo para trocar o vídeo futuramente -->
+  <source src="assets/images/fundo.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
 <div class="content">
-<img class="cover" src="assets/images/capa-musica.jpg">
-<h2>Nobody New</h2>
-<p>The Marías</p>
-<audio controls>
-<source src="assets/audio/nobody-new.mp3">
-</audio>
+<h2>Nossa música ❤️</h2>
+<div class="spotify-card">
+  <!-- Substitua o src abaixo para trocar a música futuramente -->
+  <iframe class="spotify-embed" src="https://open.spotify.com/embed/track/4pwJ6OujVQL3IpCr8KeXIg" width="100%" height="280" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+</div>
+<p class="spotify-caption">Toda vez que eu ouvir essa música, vou lembrar de nós.</p>
 <button onclick="nextPage()">Próximo</button>
 </div>
 </section>
 
-<section class="page bg" style="background-image:url('assets/images/tela4.jpg')">
+<section class="page bg text-bg">
+<div class="background" style="background-image:url('assets/images/fundo texto.png')"></div>
 <div class="overlay"></div>
-<div class="content">
+<div class="content text-content">
 <h2>Para você ❤️</h2>
-<p>Nicolas, você me mostrou da forma mais linda e transparente o que é o amor...</p>
+<p>Nicolas, você me mostrou da forma mais linda e transparente o que é o amor... O amor que se faz presente nas pequenas coisas, mas me deixa grandemente apaixonada por você ❤️ Você é parte de mim meu amor, você é o olhar, o cheiro, o carinho, a risada, o abraço, e até as lágrimas de saudade, e preciso te dizer que, tem sido um grande privilégio ter você em minha vida meu amor, quero ter a sorte de te amar em todas as minhas encarnações ❤️ eu te amo e feliz dia dos namorados, meu futuro marido!</p>
 <button onclick="nextPage()">Momentos</button>
 </div>
 </section>
 
-<section class="page">
-<div class="content">
-<h2>Nos conhecemos aqui</h2>
-<iframe src="https://maps.google.com/maps?q=R.%20Eziquiel%20Corr%C3%AAa%20Machado%20347%20Suzano&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-<button onclick="nextPage()">Ver Fotos</button>
-</div>
+<section class="page bg">
+  <div class="background" style="background-image:url('assets/images/nos.jpg')"></div>
+  <div class="overlay"></div>
+  <div class="content">
+    <h2>Nos conhecemos aqui</h2>
+    <iframe src="https://maps.google.com/maps?q=R.%20Eziquiel%20Corr%C3%AAa%20Machado%20347%20Suzano&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+    <button onclick="nextPage()">Ver Fotos</button>
+  </div>
 </section>
 
 <section class="page">
-<div class="content">
-<h2>Nossos Momentos</h2>
-<div class="gallery">
-<img src="assets/images/foto1.jpg">
-<img src="assets/images/foto2.jpg">
-<img src="assets/images/foto3.jpg">
-</div>
-<button onclick="document.getElementById('spoiler').style.display='block'">Spoiler Aqui</button>
-<div id="spoiler" style="display:none">
-<img src="assets/images/pedido.jpg">
-</div>
-<button onclick="nextPage()">Final</button>
-</div>
+  <div class="content">
+    <h2>Nossos Momentos</h2>
+
+    <div class="carousel" id="carousel">
+      <button class="carousel-btn prev" aria-label="Anterior">◀</button>
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="assets/images/almoço.jpg" alt="almoço"></div>
+        <div class="carousel-slide"><img src="assets/images/foto 1.jpg" alt="foto 1"></div>
+        <div class="carousel-slide"><img src="assets/images/foto 3.jpg" alt="foto 3"></div>
+        <div class="carousel-slide"><img src="assets/images/foto 4.jpg" alt="foto 4"></div>
+        <div class="carousel-slide"><img src="assets/images/foto2.jpg" alt="foto 2"></div>
+        <div class="carousel-slide"><img src="assets/images/nick.jpg" alt="nick"></div>
+      </div>
+      <button class="carousel-btn next" aria-label="Próximo">▶</button>
+      <div class="carousel-indicators" aria-hidden="false"></div>
+    </div>
+
+    <p class="carousel-caption">Esses dois jamais imaginariam que iam se amar tanto, era para ser só um namorico de escola...</p>
+    <button class="spotify-green" id="spoiler-btn" onclick="openSpoilerVideo()">ALERTA DE SPOILER</button>
+  </div>
 </section>
 
-<section class="page bg" style="background-image:url('assets/images/final.jpg')">
-<div class="overlay"></div>
-<div class="content">
-<h1>Eu te amo ❤️</h1>
-<p>Obrigado por chegar até aqui.</p>
+<!-- Celebration message -->
+<div id="celebration-msg" class="celebration-message hidden" aria-hidden="true">
+  <div class="celebration-text">Parabéns ❤️</div>
 </div>
+
+<div id="quiz-intro" class="quiz-overlay hidden" aria-hidden="true">
+  <div class="quiz-card">
+    <div class="quiz-intro-title">Pronto para o QUIZ?</div>
+    <div class="quiz-intro-subtitle">Vem jogar comigo ❤️</div>
+    <button id="start-quiz-btn" class="quiz-button" onclick="startQuizFlow()">JOGAR</button>
+  </div>
+</div>
+<div id="quiz-app" class="quiz-app hidden" aria-hidden="true">
+  <section class="quiz-screen" id="quiz-step-1" data-step="1">
+    <div class="background" style="background-image:url('assets/images/tela inicial.jpg')"></div>
+    <div class="overlay"></div>
+    <div class="quiz-content">
+      <div class="step-badge">Jogo 1</div>
+      <h2>Coisas que eu mais amo em você ❤️</h2>
+      <p class="quiz-description">Encontre as palavras escondidas e mostre o quanto você lembra dos nossos detalhes.</p>
+      <div class="word-search">
+        <div class="word-grid" aria-label="Caça palavras">
+          <button class="word-cell">S</button><button class="word-cell">O</button><button class="word-cell">R</button><button class="word-cell">R</button><button class="word-cell">I</button><button class="word-cell">S</button><button class="word-cell">O</button>
+          <button class="word-cell">C</button><button class="word-cell">H</button><button class="word-cell">E</button><button class="word-cell">I</button><button class="word-cell">R</button><button class="word-cell">O</button><button class="word-cell">X</button>
+          <button class="word-cell">A</button><button class="word-cell">L</button><button class="word-cell">H</button><button class="word-cell">A</button><button class="word-cell">R</button><button class="word-cell">X</button><button class="word-cell">X</button>
+          <button class="word-cell">D</button><button class="word-cell">E</button><button class="word-cell">M</button><button class="word-cell">A</button><button class="word-cell">J</button><button class="word-cell">O</button><button class="word-cell">E</button>
+          <button class="word-cell">P</button><button class="word-cell">A</button><button class="word-cell">L</button><button class="word-cell">H</button><button class="word-cell">A</button><button class="word-cell">I</button><button class="word-cell">T</button>
+          <button class="word-cell">A</button><button class="word-cell">Q</button><button class="word-cell">U</button><button class="word-cell">E</button><button class="word-cell">I</button><button class="word-cell">J</button><button class="word-cell">N</button>
+        </div>
+        <div class="word-panel">
+          <div class="word-list">
+            <div class="word-item" data-word="SORRISO">Sorriso</div>
+            <div class="word-item" data-word="OLHAR">Olhar</div>
+            <div class="word-item" data-word="CHEIRO">Cheiro</div>
+          </div>
+          <div class="word-selection">Selecionado: <span id="word-selection">...</span></div>
+          <button id="reset-word-selection" class="quiz-button outline">Limpar</button>
+        </div>
+      </div>
+      <div id="word-status" class="quiz-status">Selecione letras para formar as palavras.</div>
+      <button id="word-continue-btn" class="quiz-button hidden">Continuar</button>
+    </div>
+  </section>
+
+  <section class="quiz-screen" id="quiz-step-2" data-step="2">
+    <div class="background" style="background-image:url('assets/images/tela inicial.jpg')"></div>
+    <div class="overlay"></div>
+    <div class="quiz-content">
+      <div class="step-badge">Jogo 2</div>
+      <h2 class="quiz-question-large">Quando foi o nosso primeiro beijo? 😘</h2>
+      <div class="quiz-options">
+        <button class="quiz-option" data-correct="false">09/09/2017</button>
+        <button class="quiz-option" data-correct="true">16/10/2017</button>
+        <button class="quiz-option" data-correct="false">04/12/2017</button>
+      </div>
+      <div id="quiz2-feedback" class="quiz-status">Escolha uma resposta.</div>
+      <button id="quiz2-next" class="quiz-button hidden">Próxima Pergunta</button>
+    </div>
+  </section>
+
+  <section class="quiz-screen" id="quiz-step-3" data-step="3">
+    <div class="background" style="background-image:url('assets/images/tela inicial.jpg')"></div>
+    <div class="overlay"></div>
+    <div class="quiz-content">
+      <div class="step-badge">Jogo 3</div>
+      <h2>Ranqueie nossas comidas favoritas ❤️</h2>
+      <p class="quiz-description">Arraste cada prato para o lugar que você acha que eles merecem no nosso ranking.</p>
+      <div class="rank-layout">
+        <div class="rank-slots">
+          <div class="rank-slot" data-rank="1"><span>1º Lugar</span></div>
+          <div class="rank-slot" data-rank="2"><span>2º Lugar</span></div>
+          <div class="rank-slot" data-rank="3"><span>3º Lugar</span></div>
+          <div class="rank-slot" data-rank="4"><span>4º Lugar</span></div>
+          <div class="rank-slot" data-rank="5"><span>5º Lugar</span></div>
+        </div>
+        <div class="rank-pool" id="rank-pool">
+          <div class="rank-item" draggable="true" data-item="Picanha DEMA JOE">Picanha DEMA JOE</div>
+          <div class="rank-item" draggable="true" data-item="Feijoada na casa da vó">Feijoada na casa da vó</div>
+          <div class="rank-item" draggable="true" data-item="Espetinhos">Espetinhos</div>
+          <div class="rank-item" draggable="true" data-item="Palha Italiana">Palha Italiana</div>
+          <div class="rank-item" draggable="true" data-item="Lanche de Queijo OWNER">Lanche de Queijo OWNER</div>
+        </div>
+      </div>
+      <div id="quiz3-feedback" class="quiz-status">Preencha todas as posições com amor.</div>
+      <button id="quiz3-next" class="quiz-button hidden">Descobrir meu prêmio</button>
+    </div>
+  </section>
+
+  <section class="quiz-screen" id="quiz-step-4" data-step="4">
+    <div class="background" style="background-image:url('assets/images/tela inicial.jpg')"></div>
+    <div class="overlay"></div>
+    <div class="quiz-content">
+      <div class="step-badge">Jogo 4</div>
+      <h2>Chegou a hora do seu prêmio 😏❤️</h2>
+      <p class="quiz-description">Gire a roleta com estilo e descubra qual prêmio você ganhou.</p>
+      <div class="roulette-container">
+        <div class="roulette-wrapper">
+          <div class="roulette-wheel" id="roulette-wheel">
+            <div class="roulette-segment" data-index="0">1</div>
+            <div class="roulette-segment" data-index="1">2</div>
+            <div class="roulette-segment" data-index="2">3</div>
+            <div class="roulette-segment" data-index="3">4</div>
+            <div class="roulette-segment" data-index="4">5</div>
+            <div class="roulette-segment" data-index="5">6</div>
+            <div class="roulette-segment" data-index="6">7</div>
+            <div class="roulette-segment" data-index="7">8</div>
+          </div>
+          <div class="roulette-pointer">▼</div>
+        </div>
+        <div class="prize-list">
+          <div class="prize-item" data-index="0">1. Vale um beijo onde você quiser</div>
+          <div class="prize-item" data-index="1">2. Jantinha no DEMA JOE</div>
+          <div class="prize-item" data-index="2">3. Cineminha + Pipoca</div>
+          <div class="prize-item" data-index="3">4. Um abraço</div>
+          <div class="prize-item" data-index="4">5. Um "oi"</div>
+          <div class="prize-item" data-index="5">6. Todos os prêmios</div>
+          <div class="prize-item" data-index="6">7. Uma noite de amô</div>
+          <div class="prize-item" data-index="7">8. Uma noite selvagem</div>
+        </div>
+      </div>
+      <button id="spin-btn" class="quiz-button">GIRAR</button>
+      <div id="roulette-result" class="quiz-status">Pronto para girar?</div>
+      <button id="finish-btn" class="quiz-button hidden">Finalizar</button>
+    </div>
+  </section>
+
+  <section class="quiz-screen final-screen" id="quiz-final" data-step="5">
+    <div class="background" style="background-image:url('assets/images/tela inicial.jpg')"></div>
+    <div class="overlay"></div>
+    <div class="quiz-content final-content">
+      <div class="final-text hidden" id="final-step-1">Quero te dizer uma coisa...</div>
+      <div class="final-text hidden" id="final-step-2">Eu te amo meu amor ❤️</div>
+      <div class="final-text hidden" id="final-step-3">Obrigada por chegar até aqui</div>
+    </div>
+    <div class="particles"></div>
+  </section>
+</div>
+
+<section class="page bg">
+  <div class="background" style="background-image:url('assets/images/final.jpg')"></div>
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>Eu te amo ❤️</h1>
+    <p>Obrigado por chegar até aqui.</p>
+  </div>
 </section>
+
+<!-- Lightbox modal (abre ao clicar nas fotos) -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" aria-label="Fechar">×</button>
+    <img id="lightbox-img" src="" alt="">
+    <video id="lightbox-video" controls playsinline></video>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
